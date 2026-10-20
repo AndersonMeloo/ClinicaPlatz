@@ -20,7 +20,7 @@ export function PendingText({ children }: { children: ReactNode }) {
 }
 
 /** Etiqueta sobre fotos de banco de imagens. */
-export function ProvisionalTag({ photo, label = "Foto provisória" }: { photo: Photo; label?: string }) {
+export function ProvisionalTag({ photo, label = "" }: { photo: Photo; label?: string }) {
   if (!photo.provisional || !clinic.showPlaceholderNotes) return null;
   return (
     <span className="absolute top-4 left-4 z-10 rounded-full bg-paper/85 px-3 py-1 text-[0.68rem] font-semibold tracking-wide text-forest backdrop-blur-sm">

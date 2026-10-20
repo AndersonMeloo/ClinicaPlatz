@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clinic } from "@/config/clinic";
+import { pageMetadata, seo } from "@/content/seo";
 import { servicePages } from "@/content/landing-pages";
 import { breadcrumbNode, clinicNode, faqNode, graph, peopleNodes, webPageNode, websiteNode } from "@/lib/structured-data";
 import { MotionRoot } from "@/components/client/MotionRoot";
@@ -9,14 +10,9 @@ import { Booking } from "@/components/sections/Booking";
 import { FaqSection } from "@/components/sections/Faq";
 
 const city = clinic.address?.city ?? "Guarulhos";
-const title = `Agendar Consulta Veterinária em ${city}`;
-const description = `Agende consulta, exames, vacinação, hidratação ou atendimento de pets não convencionais na ${clinic.name}, em ${city}, pelo WhatsApp.`;
+const { title, description } = seo["/agendamento"];
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: "/agendamento" },
-};
+export const metadata: Metadata = pageMetadata("/agendamento");
 
 /** Página de agendamento. Aceita /agendamento?servico=<id> para abrir com o serviço escolhido. */
 export default function BookingPage() {

@@ -11,6 +11,9 @@
  */
 
 import { clinic, type Photo } from "@/config/clinic";
+import { seo, type SeoPath } from "@/content/seo";
+
+const meta = (path: SeoPath) => ({ title: seo[path].title, description: seo[path].description });
 
 /** Categorias usadas nos filtros da página /servicos e no topo de cada página. */
 export const categories = {
@@ -77,9 +80,7 @@ export const servicePages: LandingPageContent[] = [
     slug: "consulta-veterinaria",
     serviceId: "consulta",
     keywords: ["consulta veterinária em guarulhos"],
-    title: "Consulta Veterinária em Guarulhos",
-    description:
-      "Consulta veterinária em Guarulhos na Platz Vet: avaliação do seu pet, orientação sobre cuidados e agendamento simples pelo WhatsApp. Continental 2.",
+    ...meta("/servicos/consulta-veterinaria"),
     breadcrumb: "Consulta veterinária",
     eyebrow: "Serviço",
     h1: "Consulta veterinária em Guarulhos",
@@ -147,9 +148,7 @@ export const servicePages: LandingPageContent[] = [
       "veterinário de animais silvestres em guarulhos",
       "veterinário de aves em guarulhos",
     ],
-    title: "Veterinário de Pets Não Convencionais em Guarulhos",
-    description:
-      "Atendimento clínico de roedores, aves, répteis e animais silvestres em Guarulhos, com a médica veterinária Letícia Amaro. Agende na Platz Vet.",
+    ...meta("/servicos/pets-nao-convencionais"),
     breadcrumb: "Pets não convencionais",
     eyebrow: "Serviço",
     h1: "Veterinário de pets não convencionais em Guarulhos",
@@ -231,9 +230,7 @@ export const servicePages: LandingPageContent[] = [
     slug: "vacinacao",
     serviceId: "vacinacao",
     keywords: ["vacina para cachorro em guarulhos", "vacinação em guarulhos"],
-    title: "Vacina para Cachorro em Guarulhos",
-    description:
-      "Vacinação veterinária em Guarulhos: vacina para cachorro, reforço anual e calendário de filhotes orientado pelo veterinário. Agende na Platz Vet.",
+    ...meta("/servicos/vacinacao"),
     breadcrumb: "Vacinação",
     eyebrow: "Serviço",
     h1: "Vacinação veterinária em Guarulhos",
@@ -298,9 +295,7 @@ export const servicePages: LandingPageContent[] = [
     slug: "exames-veterinarios",
     serviceId: "exames",
     keywords: ["exames veterinários em guarulhos", "exame de sangue para cachorro em guarulhos"],
-    title: "Exames Veterinários em Guarulhos",
-    description:
-      "Exames veterinários em Guarulhos, como exame de sangue para cachorro, para apoiar o diagnóstico e o acompanhamento do seu pet. Agende na Platz Vet.",
+    ...meta("/servicos/exames-veterinarios"),
     breadcrumb: "Exames",
     eyebrow: "Serviço",
     h1: "Exames veterinários em Guarulhos",
@@ -362,9 +357,7 @@ export const servicePages: LandingPageContent[] = [
     slug: "hidratacao",
     serviceId: "hidratacao",
     keywords: ["hidratação para cachorro em guarulhos"],
-    title: "Hidratação para Cachorro em Guarulhos",
-    description:
-      "Hidratação para cachorro e outros pets em Guarulhos: reposição de líquidos com avaliação do veterinário. Conheça os sinais de desidratação. Platz Vet.",
+    ...meta("/servicos/hidratacao"),
     breadcrumb: "Hidratação",
     eyebrow: "Serviço",
     h1: "Hidratação para pets em Guarulhos",
@@ -425,9 +418,7 @@ export const servicePages: LandingPageContent[] = [
     slug: "farmacia-veterinaria",
     serviceId: "farmacia",
     keywords: ["farmácia veterinária em guarulhos"],
-    title: "Farmácia Veterinária em Guarulhos",
-    description:
-      "Farmácia veterinária em Guarulhos dentro da Platz Vet: medicamentos e cuidados para o seu pet, com mais praticidade e segurança. Continental 2.",
+    ...meta("/servicos/farmacia-veterinaria"),
     breadcrumb: "Farmácia veterinária",
     eyebrow: "Serviço",
     h1: "Farmácia veterinária em Guarulhos",
@@ -473,9 +464,7 @@ export const petlovePage: LandingPageContent = {
   path: "/petlove",
   slug: "petlove",
   keywords: ["petlove guarulhos", "clínica veterinária petlove guarulhos"],
-  title: "Atendimento Petlove em Guarulhos",
-  description:
-    "A Platz Vet atende clientes Petlove em Guarulhos. Veja como agendar pelo WhatsApp e quais serviços a clínica oferece no Continental 2.",
+  ...meta("/petlove"),
   breadcrumb: "Petlove",
   eyebrow: "Planos de saúde pet",
   h1: "Clínica veterinária que atende Petlove em Guarulhos",

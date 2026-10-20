@@ -8,15 +8,17 @@ import { Faq, homeFaqItems } from "@/components/sections/Faq";
 import { InstagramBand } from "@/components/sections/Footer";
 import { clinicNode, faqNode, graph, peopleNodes, webPageNode, websiteNode } from "@/lib/structured-data";
 import { servicePages } from "@/content/landing-pages";
-import { clinic } from "@/config/clinic";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { pageMetadata, seo } from "@/content/seo";
+
+export const metadata = pageMetadata("/");
 
 export default function HomePage() {
   const jsonLd = graph(
     clinicNode(servicePages),
     peopleNodes(),
     websiteNode(),
-    webPageNode("/", `${clinic.descriptor} em Guarulhos | ${clinic.name}`, clinic.summary),
+    webPageNode("/", seo["/"].title, seo["/"].description),
     faqNode("/", homeFaqItems()),
   );
 

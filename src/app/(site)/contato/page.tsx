@@ -4,6 +4,7 @@ import { clinic } from "@/config/clinic";
 import { buildWhatsAppUrl, defaultWhatsAppMessage } from "@/lib/whatsapp";
 import { breadcrumbNode, clinicNode, graph, peopleNodes, webPageNode, websiteNode } from "@/lib/structured-data";
 import { servicePages } from "@/content/landing-pages";
+import { pageMetadata, seo } from "@/content/seo";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { MotionRoot } from "@/components/client/MotionRoot";
 import { ButtonLink, buttonClass } from "@/components/ui/Button";
@@ -13,18 +14,14 @@ import { InstagramBand } from "@/components/sections/Footer";
 
 const city = clinic.address?.city ?? "Guarulhos";
 
-export const metadata: Metadata = {
-  title: "Contato: Clínica Veterinária no Continental 2",
-  description: `Endereço, WhatsApp, Instagram e mapa da ${clinic.name}, clínica veterinária no Continental 2, em ${city}. Agende pelo WhatsApp.`,
-  alternates: { canonical: "/contato" },
-};
+export const metadata: Metadata = pageMetadata("/contato");
 
 export default function ContactPage() {
   const jsonLd = graph(
     clinicNode(servicePages),
     peopleNodes(),
     websiteNode(),
-    webPageNode("/contato", `Contato | ${clinic.name}`, metadata.description ?? "", "ContactPage"),
+    webPageNode("/contato", seo["/contato"].title, seo["/contato"].description, "ContactPage"),
     breadcrumbNode([
       { name: "Início", path: "/" },
       { name: "Contato", path: "/contato" },

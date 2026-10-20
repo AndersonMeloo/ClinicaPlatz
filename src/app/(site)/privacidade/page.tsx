@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { clinic } from "@/config/clinic";
+import { pageMetadata } from "@/content/seo";
 import { formatAddress } from "@/lib/hours";
 import { buildWhatsAppUrl, defaultWhatsAppMessage, whatsappDisplay } from "@/lib/whatsapp";
 import { MotionRoot } from "@/components/client/MotionRoot";
@@ -9,11 +10,7 @@ import { Toc } from "@/components/client/Toc";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PendingBadge, PendingText } from "@/components/ui/Placeholder";
 
-export const metadata: Metadata = {
-  title: "Política de Privacidade",
-  description: `Como a ${clinic.name} trata os dados pessoais de quem usa o site e os canais de atendimento, de acordo com a LGPD (Lei 13.709/2018).`,
-  alternates: { canonical: "/privacidade" },
-};
+export const metadata: Metadata = pageMetadata("/privacidade");
 
 /** Data da última revisão desta política (AAAA-MM-DD). */
 const UPDATED = "2026-10-19";

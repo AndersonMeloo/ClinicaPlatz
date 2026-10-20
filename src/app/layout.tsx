@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Fraunces, Manrope } from "next/font/google";
 import { clinic } from "@/config/clinic";
+import { BRAND_SUFFIX, seo } from "@/content/seo";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { IntroScreen } from "@/components/ui/IntroScreen";
 import { BackToTop } from "@/components/client/BackToTop";
@@ -29,12 +30,14 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const title = `${clinic.descriptor} em ${clinic.address?.city ?? "Guarulhos"} | ${clinic.name}`;
+const title = `${seo["/"].title}${BRAND_SUFFIX}`;
+const description = seo["/"].description;
 
 export const metadata: Metadata = {
   metadataBase: new URL(clinic.siteUrl),
   title: { default: title, template: `%s | ${clinic.name}` },
-  description: clinic.summary,
+  description,
+  keywords: seo["/"].keywords,
   applicationName: clinic.name,
   alternates: { canonical: "/" },
   openGraph: {
@@ -42,10 +45,10 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: clinic.name,
     title,
-    description: clinic.summary,
+    description,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: `Fachada da ${clinic.name}` }],
   },
-  twitter: { card: "summary_large_image", title, description: clinic.summary, images: ["/og-image.jpg"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og-image.jpg"] },
 };
 
 export const viewport: Viewport = {

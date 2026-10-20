@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clinic } from "@/config/clinic";
+import { pageMetadata, seo } from "@/content/seo";
 import { categories, landingPages, servicePages } from "@/content/landing-pages";
 import { breadcrumbNode, clinicNode, graph, peopleNodes, webPageNode, websiteNode } from "@/lib/structured-data";
 import { MotionRoot } from "@/components/client/MotionRoot";
@@ -8,15 +9,9 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { BookingCta } from "@/components/sections/BookingCta";
 
-const title = "Serviços Veterinários em Guarulhos";
-const description =
-  "Consulta veterinária, exames, vacinação, hidratação, farmácia e atendimento de pets não convencionais em Guarulhos. Agende na Platz Vet pelo WhatsApp.";
+const { title, description } = seo["/servicos"];
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: "/servicos" },
-};
+export const metadata: Metadata = pageMetadata("/servicos");
 
 export default function ServicesHubPage() {
   const trail = [

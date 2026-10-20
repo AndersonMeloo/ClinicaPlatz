@@ -68,7 +68,7 @@ export function About() {
               </p>
             ))}
 
-            <Link href="/agendamento?servico=consulta" className={buttonClass("outline", "mt-10")}>
+            <Link href="/consulta?servico=consulta" className={buttonClass("outline", "mt-10")}>
               Agendar uma consulta
             </Link>
           </div>

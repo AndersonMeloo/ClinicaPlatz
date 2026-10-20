@@ -68,7 +68,7 @@ export function BookingForm({
   initialReason,
 }: {
   reasons: string[];
-  /** id do serviço → nome exibido, para ler /agendamento?servico=<id>. */
+  /** id do serviço → nome exibido, para ler /consulta?servico=<id>. */
   serviceIds: Record<string, string>;
   demoMode: boolean;
   /** Motivo já selecionado. */

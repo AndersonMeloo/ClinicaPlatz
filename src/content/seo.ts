@@ -129,7 +129,7 @@ export const seo = {
       "rede credenciada petlove guarulhos",
     ],
   },
-  "/agendamento": {
+  "/consulta": {
     title: "Solicitar Consulta Veterinária em Guarulhos",
     description:
       "Conte o que o seu pet está sentindo e envie pelo WhatsApp: o veterinário da Platz Vet responde e combina o horário. Sem cadastro.",

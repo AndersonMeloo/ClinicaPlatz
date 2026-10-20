@@ -10,24 +10,24 @@ import { Booking } from "@/components/sections/Booking";
 import { FaqSection } from "@/components/sections/Faq";
 
 const city = clinic.address?.city ?? "Guarulhos";
-const { title, description } = seo["/agendamento"];
+const { title, description } = seo["/consulta"];
 
-export const metadata: Metadata = pageMetadata("/agendamento");
+export const metadata: Metadata = pageMetadata("/consulta");
 
-/** Página de agendamento. Aceita /agendamento?servico=<id> para abrir com o serviço escolhido. */
+/** Página de pedido de consulta. Aceita /consulta?servico=<id> para abrir com o serviço escolhido. */
 export default function BookingPage() {
   const trail = [
     { name: "Início", path: "/" },
-    { name: "Consulta", path: "/agendamento" },
+    { name: "Consulta", path: "/consulta" },
   ];
   const faq = clinic.faq.filter((item) => item.answer).slice(0, 3);
   const jsonLd = graph(
     clinicNode(servicePages),
     peopleNodes(),
     websiteNode(),
-    webPageNode("/agendamento", title, description),
+    webPageNode("/consulta", title, description),
     breadcrumbNode(trail),
-    faqNode("/agendamento", faq),
+    faqNode("/consulta", faq),
   );
 
   return (

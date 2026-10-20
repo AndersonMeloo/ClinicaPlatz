@@ -51,7 +51,7 @@ export default function ContactPage() {
                   <WhatsAppIcon className="size-[1.15rem]" />
                   Falar no WhatsApp
                 </ButtonLink>
-                <Link href="/agendamento" className={buttonClass("outline")}>
+                <Link href="/consulta" className={buttonClass("outline")}>
                   Agendar consulta
                 </Link>
               </div>

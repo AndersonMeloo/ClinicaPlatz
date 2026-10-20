@@ -395,7 +395,7 @@ export const clinic: ClinicConfig = {
 
 export const navigation = [
   { label: "Início", href: "/" },
-  { label: "Consulta", href: "/agendamento" },
+  { label: "Consulta", href: "/consulta" },
   { label: "Serviços", href: "/servicos" },
   { label: "Contato", href: "/contato" },
 ] as const;

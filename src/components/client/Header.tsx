@@ -7,6 +7,7 @@ import { clinic, isActivePath, navigation } from "@/config/clinic";
 import { ArrowRight } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { WhatsAppIcon } from "@/components/ui/BrandIcons";
+import { buildWhatsAppUrl, consultationWhatsAppMessage } from "@/lib/whatsapp";
 import { MobileMenu } from "./MobileMenu";
 
 /**
@@ -62,17 +63,20 @@ export function Header() {
           </ul>
         </nav>
 
-        <Link
-          href="/agendamento"
+        <a
+          href={buildWhatsAppUrl(consultationWhatsAppMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
           className="group/cta inline-flex h-10 items-center gap-2 rounded-full border border-forest/20 bg-paper/70 pr-3.5 pl-3 text-sm font-semibold whitespace-nowrap transition-[background-color,border-color] duration-300 ease-soft hover:border-forest/50 hover:bg-paper max-lg:hidden"
         >
           <WhatsAppIcon className="size-4 text-sage" />
-          Solicitar consulta
+          Agendar pelo WhatsApp
           <ArrowRight
             aria-hidden="true"
             className="size-3.5 transition-transform duration-300 ease-soft group-hover/cta:translate-x-0.5"
           />
-        </Link>
+          <span className="sr-only">(abre em nova aba)</span>
+        </a>
 
         <div className="lg:hidden">
           <MobileMenu />

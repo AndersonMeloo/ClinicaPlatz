@@ -13,7 +13,7 @@ Home: pilar "clínica veterinária em Guarulhos"
 │   ├── /servicos/hidratacao
 │   └── /servicos/farmacia-veterinaria
 ├── /petlove
-├── /agendamento: formulário (aceita ?servico=)
+├── /consulta: formulário (aceita ?servico=)
 └── /contato: NAP + mapa, intenção local e de bairro
 
 Blog no WordPress: posts informativos que linkam para as páginas acima
@@ -96,7 +96,7 @@ Pautas de blog com potencial: "veterinário de aves" (390 / KD 8), "veterinário
   - **Páginas de serviço:** bloco "Veja também" no fim de cada uma.
   - **Navegação:** trilha de navegação no topo de cada página.
 - **Nome, endereço e telefone iguais em todo o site:** o cartão com essas informações aparece em todas as páginas de serviço, no rodapé e no contato.
-- **Conversão:** cada página de serviço leva a `/agendamento?servico=<id>`, que abre o formulário com o serviço já selecionado.
+- **Conversão:** cada página de serviço leva a `/consulta?servico=<id>`, que abre o formulário com o serviço já selecionado.
 - **Formato de artigo:** cada página tem trilha de navegação, categoria, data de atualização (`dateModified` no schema), tempo de leitura e índice "Nesta página" com âncoras por seção. O campo `reviewedBy` mostra "Revisado por" e entra no schema assim que o veterinário revisar o texto.
 
 ## Blog no WordPress: plano de conteúdo
@@ -121,16 +121,16 @@ Volumes nacionais (Semrush BR). Cada post ataca um termo informativo e passa aut
 
 ### Link de agendamento
 
-O formulário fica em `/agendamento`. Com `?servico=`, ele já abre com o serviço escolhido:
+O formulário fica em `/consulta`. Com `?servico=`, ele já abre com o serviço escolhido:
 
 | Uso | Link |
 |---|---|
-| Bio do Instagram, Perfil da Empresa no Google | `/agendamento` |
-| Posts de vacinação | `/agendamento?servico=vacinacao` |
-| Posts de exames | `/agendamento?servico=exames` |
-| Posts de hidratação | `/agendamento?servico=hidratacao` |
-| Posts de consulta | `/agendamento?servico=consulta` |
-| Posts da farmácia | `/agendamento?servico=farmacia` |
+| Bio do Instagram, Perfil da Empresa no Google | `/consulta` |
+| Posts de vacinação | `/consulta?servico=vacinacao` |
+| Posts de exames | `/consulta?servico=exames` |
+| Posts de hidratação | `/consulta?servico=hidratacao` |
+| Posts de consulta | `/consulta?servico=consulta` |
+| Posts da farmácia | `/consulta?servico=farmacia` |
 
 Use esse link no botão de chamada (CTA) ao final de cada post do blog. Os links de conteúdo (âncoras com a palavra contratada) continuam apontando para as páginas de serviço.
 

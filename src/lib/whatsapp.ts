@@ -51,4 +51,6 @@ export function buildBookingMessage(r: BookingRequest): string {
   return lines.join("\n");
 }
 
+export const consultationWhatsAppMessage = `Olá! Vim pelo site da ${clinic.name} e gostaria de agendar uma consulta para o meu pet.`;
+
 export const defaultWhatsAppMessage = `Olá! Vim pelo site da ${clinic.name} e gostaria de mais informações.`;

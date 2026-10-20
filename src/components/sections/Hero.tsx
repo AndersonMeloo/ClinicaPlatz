@@ -47,7 +47,7 @@ export function Hero() {
               convencionais. Solicite seu horário pelo WhatsApp em poucos passos.
             </p>
             <div data-hero-fade className="mt-8 flex flex-wrap gap-3">
-              <Link href="/agendamento" className={buttonClass("primary")}>
+              <Link href="/consulta" className={buttonClass("primary")}>
                 <WhatsAppIcon className="size-[1.15rem]" />
                 Agendar pelo WhatsApp
               </Link>

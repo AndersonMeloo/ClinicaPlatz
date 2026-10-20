@@ -6,16 +6,16 @@ import { buildWhatsAppUrl, defaultWhatsAppMessage, whatsappNumber } from "@/lib/
 
 const steps = [
   {
-    title: "Preencha os dados",
-    text: "Leva menos de um minuto. Nada é enviado até você confirmar no WhatsApp.",
+    title: "Conte o que está acontecendo",
+    text: "Informe os dados do seu pet e descreva os sintomas. Nada é enviado até você confirmar no WhatsApp.",
   },
   {
-    title: "Revise a mensagem",
-    text: "O WhatsApp abre com o texto pronto. Você pode editar antes de enviar.",
+    title: "Envie pelo WhatsApp",
+    text: "O WhatsApp abre com a mensagem pronta. Você pode revisar e completar antes de enviar.",
   },
   {
-    title: "A clínica confirma",
-    text: "A clínica responde com os horários disponíveis. O agendamento vale após essa confirmação.",
+    title: "O veterinário responde",
+    text: "Ele avalia o seu relato e combina com você o melhor horário para o atendimento.",
   },
 ];
 
@@ -34,9 +34,9 @@ export function Booking({ defaultReason, title }: { defaultReason?: string; titl
           <SectionHeading
             id="agendar-title"
             tone="dark"
-            eyebrow="Agendamento"
-            title={title ?? "Solicite um horário em poucos passos."}
-            intro="Sem cadastro e sem ligação. Você envia o pedido pelo WhatsApp e a clínica confirma a disponibilidade."
+            eyebrow="Consulta"
+            title={title ?? "Conte o que o seu pet precisa."}
+            intro="Sem cadastro e sem ligação. Você descreve o que está acontecendo, envia pelo WhatsApp e o veterinário responde."
           />
 
           <ol className="mt-12 border-t border-cream/15" data-reveal-group>
@@ -54,8 +54,8 @@ export function Booking({ defaultReason, title }: { defaultReason?: string; titl
 
         <div className="lg:col-span-6 lg:col-start-7" data-reveal>
           <div className="rounded-[1.75rem] bg-paper p-6 text-forest shadow-[0_40px_80px_-40px_rgb(0_0_0/0.55)] sm:p-8 md:p-10">
-            <h3 className="text-h3">Pedido de agendamento</h3>
-            <p className="mt-2 mb-8 text-ink-muted">Preencha os campos abaixo para montar sua mensagem.</p>
+            <h3 className="text-h3">Pedido de consulta</h3>
+            <p className="mt-2 mb-8 text-ink-muted">Preencha os campos abaixo para montar a sua mensagem.</p>
             <BookingForm
               reasons={reasons}
               serviceIds={serviceIds}

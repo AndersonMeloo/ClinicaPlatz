@@ -5,8 +5,8 @@ export interface BookingRequest {
   pet: string;
   species: string;
   reason: string;
-  period: string;
-  notes?: string;
+  /** Relato do tutor: o que está acontecendo com o animal. */
+  details: string;
 }
 
 /** Apenas dígitos; `null` se o número não estiver configurado ou for inválido. */
@@ -36,16 +36,18 @@ export function buildWhatsAppUrl(message: string): string {
 
 export function buildBookingMessage(r: BookingRequest): string {
   const lines = [
-    `Olá! Gostaria de solicitar um agendamento na ${clinic.name}.`,
+    `Olá! Gostaria de uma consulta na ${clinic.name}.`,
     "",
     `Nome do tutor: ${r.tutor.trim()}`,
     `Nome do animal: ${r.pet.trim()}`,
     `Espécie: ${r.species.trim()}`,
     `Motivo do contato: ${r.reason.trim()}`,
-    `Preferência de horário: ${r.period.trim()}`,
+    "",
+    "O que está acontecendo:",
+    r.details.trim(),
+    "",
+    "Quando posso levar o meu pet?",
   ];
-  if (r.notes?.trim()) lines.push(`Observações: ${r.notes.trim()}`);
-  lines.push("", "Poderiam me informar a disponibilidade?");
   return lines.join("\n");
 }
 

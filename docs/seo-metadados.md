@@ -15,7 +15,7 @@ Regras: título completo (com "| Platz Vet") até 60 caracteres · meta descript
 | `/servicos/hidratacao` | Hidratação para Cachorro em Guarulhos | Platz Vet | 49 | Hidratação para cachorro em Guarulhos com avaliação do veterinário. Saiba os sinais de desidratação e agende na Platz Vet. | 122 |
 | `/servicos/farmacia-veterinaria` | Farmácia Veterinária em Guarulhos | Platz Vet | 45 | Farmácia veterinária em Guarulhos dentro da Platz Vet: medicamentos e cuidados para o seu pet, com orientação do veterinário. | 125 |
 | `/petlove` | Atendimento Petlove em Guarulhos | Platz Vet | 44 | A Platz Vet atende clientes Petlove em Guarulhos. Veja como agendar pelo WhatsApp e os serviços da clínica no Continental 2. | 124 |
-| `/agendamento` | Agendar Consulta Veterinária em Guarulhos | Platz Vet | 53 | Agende consulta veterinária em Guarulhos pelo WhatsApp: preencha o formulário e a Platz Vet confirma o horário. Sem cadastro. | 125 |
+| `/agendamento` | Solicitar Consulta Veterinária em Guarulhos | Platz Vet | 55 | Conte o que o seu pet está sentindo e envie pelo WhatsApp: o veterinário da Platz Vet responde e combina o horário. Sem cadastro. | 129 |
 | `/contato` | Contato: Clínica Veterinária no Continental 2 | Platz Vet | 57 | Endereço, WhatsApp e mapa da Platz Vet, clínica veterinária na Rua José Pedro da Silva, 36, no Continental 2, em Guarulhos. | 123 |
 | `/privacidade` | Política de Privacidade | Platz Vet | 35 | Como a Platz Vet trata os dados pessoais de quem usa o site e os canais de atendimento, conforme a LGPD (Lei 13.709/2018). | 122 |
 
@@ -95,11 +95,11 @@ Regras: título completo (com "| Platz Vet") até 60 caracteres · meta descript
 
 ### `/agendamento`
 
-1. agendar consulta veterinária
-2. agendamento veterinário guarulhos
+1. consulta veterinária pelo whatsapp
+2. agendar consulta veterinária guarulhos
 3. marcar veterinário guarulhos
-4. consulta veterinária pelo whatsapp
-5. veterinário com hora marcada
+4. pedir consulta veterinária
+5. solicitar consulta veterinária
 
 ### `/contato`
 

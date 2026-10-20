@@ -367,15 +367,15 @@ export const clinic: ClinicConfig = {
 
   faq: [
     {
-      question: "Como funciona o agendamento pelo site?",
+      question: "Como funciona o pedido de consulta pelo site?",
       answer:
-        "Você preenche um formulário curto e o WhatsApp abre com a mensagem pronta. É só revisar e enviar: a clínica responde com os horários disponíveis.",
+        "Você conta o que está acontecendo com o seu pet num formulário curto e o WhatsApp abre com a mensagem pronta. É só enviar: o veterinário responde e combina o horário.",
       confirmed: true,
     },
     {
       question: "O formulário já garante o meu horário?",
       answer:
-        "Não. O formulário apenas prepara a sua solicitação. O horário só fica confirmado depois da resposta da clínica pelo WhatsApp.",
+        "Não. O formulário apenas prepara a sua mensagem. O horário é combinado com o veterinário pelo WhatsApp.",
       confirmed: true,
     },
     {
@@ -395,7 +395,7 @@ export const clinic: ClinicConfig = {
 
 export const navigation = [
   { label: "Início", href: "/" },
-  { label: "Agendamento", href: "/agendamento" },
+  { label: "Consulta", href: "/agendamento" },
   { label: "Serviços", href: "/servicos" },
   { label: "Contato", href: "/contato" },
 ] as const;

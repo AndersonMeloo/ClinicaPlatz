@@ -78,7 +78,7 @@ export default function ServicesHubPage() {
 
         <BookingCta
           title="Já sabe o que o seu pet precisa?"
-          text="Preencha um formulário rápido e o WhatsApp abre com a sua mensagem pronta. A clínica confirma o horário."
+          text="Conte o que está acontecendo com o seu pet e envie pelo WhatsApp. O veterinário responde e combina o horário com você."
         />
       </main>
       <MotionRoot />

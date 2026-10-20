@@ -12,7 +12,7 @@ export function BookingCta({ serviceId, title, text }: { serviceId?: string; tit
         <div className="lg:col-span-7">
           <p className="eyebrow flex items-center gap-3 text-leaf">
             <span aria-hidden="true" className="h-px w-8 bg-current" />
-            Agendamento
+            Consulta
           </p>
           <h2 id="agendar-cta-title" className="text-h2 mt-5 text-balance">
             {title}
@@ -22,7 +22,7 @@ export function BookingCta({ serviceId, title, text }: { serviceId?: string; tit
         <div className="flex flex-wrap gap-3 lg:col-span-5 lg:justify-end">
           <Link href={bookingHref(serviceId)} className={buttonClass("light")}>
             <WhatsAppIcon className="size-[1.15rem]" />
-            Agendar agora
+            Solicitar consulta
           </Link>
           <ButtonLink
             href={buildWhatsAppUrl(defaultWhatsAppMessage)}

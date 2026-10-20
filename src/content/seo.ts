@@ -130,15 +130,15 @@ export const seo = {
     ],
   },
   "/agendamento": {
-    title: "Agendar Consulta Veterinária em Guarulhos",
+    title: "Solicitar Consulta Veterinária em Guarulhos",
     description:
-      "Agende consulta veterinária em Guarulhos pelo WhatsApp: preencha o formulário e a Platz Vet confirma o horário. Sem cadastro.",
+      "Conte o que o seu pet está sentindo e envie pelo WhatsApp: o veterinário da Platz Vet responde e combina o horário. Sem cadastro.",
     keywords: [
-      "agendar consulta veterinária",
-      "agendamento veterinário guarulhos",
-      "marcar veterinário guarulhos",
       "consulta veterinária pelo whatsapp",
-      "veterinário com hora marcada",
+      "agendar consulta veterinária guarulhos",
+      "marcar veterinário guarulhos",
+      "pedir consulta veterinária",
+      "solicitar consulta veterinária",
     ],
   },
   "/contato": {

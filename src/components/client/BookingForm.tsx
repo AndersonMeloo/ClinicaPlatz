@@ -12,8 +12,7 @@ interface Fields {
   species: string;
   speciesOther: string;
   reason: string;
-  period: string;
-  notes: string;
+  details: string;
 }
 
 type FieldName = keyof Fields;
@@ -25,12 +24,11 @@ const EMPTY: Fields = {
   species: "",
   speciesOther: "",
   reason: "",
-  period: "Sem preferência",
-  notes: "",
+  details: "",
 };
 
 const STORAGE_KEY = "platz:agendamento";
-const ORDER: FieldName[] = ["tutor", "pet", "species", "speciesOther", "reason"];
+const ORDER: FieldName[] = ["tutor", "pet", "species", "speciesOther", "reason", "details"];
 
 const SPECIES: { value: string; icon: LucideIcon }[] = [
   { value: "Cão", icon: Dog },
@@ -40,7 +38,6 @@ const SPECIES: { value: string; icon: LucideIcon }[] = [
   { value: "Réptil", icon: Turtle },
   { value: "Outro", icon: PawPrint },
 ];
-const PERIODS = ["Manhã", "Tarde", "Sem preferência"];
 
 function validate(f: Fields): Errors {
   const errors: Errors = {};
@@ -49,6 +46,7 @@ function validate(f: Fields): Errors {
   if (!f.species) errors.species = "Selecione a espécie.";
   if (f.species === "Outro" && !f.speciesOther.trim()) errors.speciesOther = "Informe qual é a espécie.";
   if (!f.reason) errors.reason = "Selecione o motivo do contato.";
+  if (f.details.trim().length < 10) errors.details = "Conte em poucas palavras o que está acontecendo.";
   return errors;
 }
 
@@ -143,8 +141,7 @@ export function BookingForm({
         pet: fields.pet,
         species: fields.species === "Outro" ? fields.speciesOther : fields.species,
         reason: fields.reason,
-        period: fields.period,
-        notes: fields.notes,
+        details: fields.details,
       }),
     );
     const win = window.open(url, "_blank");
@@ -300,43 +297,28 @@ export function BookingForm({
         {renderError("reason")}
       </div>
 
-      <fieldset>
-        <legend className="mb-2 text-sm font-semibold">
-          Período de preferência <span className="font-normal text-ink-muted">(opcional)</span>
-        </legend>
-        <div className="grid grid-cols-3 gap-2">
-          {PERIODS.map((period) => (
-            <label key={period}>
-              <input
-                type="radio"
-                name={`${id}-period`}
-                value={period}
-                checked={fields.period === period}
-                onChange={() => update("period", period)}
-                className="peer sr-only"
-              />
-              <span className="flex h-13 cursor-pointer items-center justify-center rounded-xl border border-forest/20 bg-white/70 px-2 text-center text-sm leading-tight font-semibold transition-colors peer-checked:border-forest peer-checked:bg-forest peer-checked:text-cream peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-clay hover:border-forest/40">
-                {period}
-              </span>
-            </label>
-          ))}
-        </div>
-      </fieldset>
-
       <div>
-        <label htmlFor={fieldId("notes")} className="mb-2 block text-sm font-semibold">
-          Observações <span className="font-normal text-ink-muted">(opcional)</span>
+        <label htmlFor={fieldId("details")} className="mb-2 block text-sm font-semibold">
+          O que está acontecendo com o seu pet?
         </label>
         <textarea
-          id={fieldId("notes")}
-          name="notes"
-          rows={3}
-          maxLength={400}
-          value={fields.notes}
-          onChange={(e) => update("notes", e.target.value)}
-          placeholder="Ex.: idade do animal, sintomas, dias que funcionam melhor para você"
+          id={fieldId("details")}
+          name="details"
+          rows={4}
+          maxLength={600}
+          required
+          value={fields.details}
+          onChange={(e) => update("details", e.target.value)}
+          onBlur={() => onBlur("details")}
+          aria-invalid={Boolean(errors.details)}
+          aria-describedby={[`${id}-details-dica`, describedBy("details")].filter(Boolean).join(" ")}
+          placeholder="Ex.: está sem comer desde ontem e vomitou duas vezes."
           className={`${inputClass} resize-y py-3 leading-relaxed`}
         />
+        <p id={`${id}-details-dica`} className="mt-2 text-sm text-ink-muted">
+          Sintomas, há quanto tempo, idade do animal ou o que mais achar importante.
+        </p>
+        {renderError("details")}
       </div>
 
       <div>
@@ -345,10 +327,10 @@ export function BookingForm({
           className="group inline-flex h-14 w-full items-center justify-center gap-3 rounded-full bg-forest px-6 font-semibold text-cream transition-[background-color,transform] duration-300 ease-soft hover:bg-forest-deep active:scale-[0.99]"
         >
           <WhatsAppIcon className="size-5" />
-          Solicitar agendamento
+          Enviar pelo WhatsApp
         </button>
         <p id={`${id}-ajuda`} className="mt-3 text-center text-sm leading-relaxed text-ink-muted">
-          Você será direcionado ao WhatsApp. O horário só fica confirmado após a resposta da clínica.
+          Você será direcionado ao WhatsApp. O veterinário responde e combina com você o melhor horário.
         </p>
       </div>
 
@@ -360,7 +342,7 @@ export function BookingForm({
         <div role="status" className="rounded-xl border border-forest/15 bg-mint p-5 text-sm leading-relaxed">
           <p className="font-semibold">Abrimos o WhatsApp com a sua mensagem.</p>
           <p className="mt-1 text-forest/80">
-            Envie por lá e aguarde: a clínica vai responder com a disponibilidade. Seus dados continuam aqui caso
+            Envie por lá e aguarde: o veterinário vai responder para combinar o atendimento. Seus dados continuam aqui caso
             precise reenviar.
           </p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-semibold">

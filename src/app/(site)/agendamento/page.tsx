@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMetadata("/agendamento");
 export default function BookingPage() {
   const trail = [
     { name: "Início", path: "/" },
-    { name: "Agendamento", path: "/agendamento" },
+    { name: "Consulta", path: "/agendamento" },
   ];
   const faq = clinic.faq.filter((item) => item.answer).slice(0, 3);
   const jsonLd = graph(
@@ -40,15 +40,15 @@ export default function BookingPage() {
               <div className="lg:col-span-7">
                 <p className="eyebrow flex items-center gap-3 text-sage">
                   <span aria-hidden="true" className="h-px w-8 bg-current" />
-                  Agendamento · {city}
+                  Consulta · {city}
                 </p>
                 <h1 id="pagina-titulo" className="text-h1 mt-5 max-w-[14ch] text-balance">
-                  Agende o atendimento do seu pet.
+                  Solicite uma consulta para o seu pet.
                 </h1>
               </div>
               <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-ink-muted lg:col-span-4 lg:col-start-9 lg:mt-0 lg:pb-2">
-                Atendimento para cães, gatos e pets não convencionais na {clinic.name}. Você monta o pedido aqui, envia
-                pelo WhatsApp e a clínica confirma o horário.
+                Atendimento para cães, gatos e pets não convencionais na {clinic.name}. Conte aqui o que está
+                acontecendo, envie pelo WhatsApp e o veterinário combina o horário com você.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function BookingPage() {
 
         <Booking />
 
-        <FaqSection id="duvidas-agendamento" title="Sobre o agendamento." items={faq} />
+        <FaqSection id="duvidas-agendamento" title="Sobre a consulta." items={faq} />
       </main>
       <MotionRoot />
       <JsonLd data={jsonLd} />

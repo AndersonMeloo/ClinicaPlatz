@@ -106,7 +106,7 @@ export const servicePages: LandingPageContent[] = [
       {
         heading: "Consulta com hora marcada",
         paragraphs: [
-          "O agendamento é feito pelo WhatsApp: você envia o pedido com o nome do pet e o motivo do contato, e a equipe responde com os horários disponíveis. Assim você já chega com o horário confirmado.",
+          "O agendamento é feito pelo WhatsApp: você envia o pedido com o nome do pet e o motivo do contato, e a clínica responde com os horários disponíveis. Assim você já chega com o horário confirmado.",
           "Se o seu pet tem plano Petlove, informe ao agendar: a Platz Vet atende clientes Petlove.",
         ],
       },
@@ -115,11 +115,11 @@ export const servicePages: LandingPageContent[] = [
       {
         question: "Preciso agendar a consulta?",
         answer:
-          "Sim. O agendamento é feito pelo WhatsApp: você envia o pedido e a equipe confirma o horário disponível.",
+          "Sim. O agendamento é feito pelo WhatsApp: você envia o pedido e a clínica confirma o horário disponível.",
       },
       {
         question: "Quanto custa a consulta veterinária?",
-        answer: "Os valores são informados pela equipe da clínica no WhatsApp, junto com os horários disponíveis.",
+        answer: "Os valores são informados pela clínica no WhatsApp, junto com os horários disponíveis.",
       },
       {
         question: "O que levar na consulta?",
@@ -128,7 +128,7 @@ export const servicePages: LandingPageContent[] = [
       },
       {
         question: "A Platz Vet atende clientes Petlove?",
-        answer: "Sim. Para saber a cobertura do seu plano, consulte a equipe antes do atendimento.",
+        answer: "Sim. Para saber a cobertura do seu plano, consulte a clínica antes do atendimento.",
       },
     ],
     related: ["/servicos/vacinacao", "/servicos/pets-nao-convencionais", "/petlove"],
@@ -163,7 +163,7 @@ export const servicePages: LandingPageContent[] = [
           "Outros animais silvestres e pets não convencionais",
         ],
         paragraphs: [
-          "Tem um pet de outra espécie? Fale com a equipe pelo WhatsApp antes de agendar para confirmar o atendimento.",
+          "Tem um pet de outra espécie? Fale com a clínica pelo WhatsApp antes de agendar para confirmar o atendimento.",
         ],
       },
       {
@@ -177,7 +177,7 @@ export const servicePages: LandingPageContent[] = [
         heading: "Como é o atendimento",
         paragraphs: [
           "A consulta inclui avaliação física e orientação ao tutor sobre os cuidados do dia a dia, para que o seu pet tenha bem-estar e qualidade de vida.",
-          "O atendimento é feito mediante agendamento. Ao agendar, informe a espécie do seu pet e pergunte à equipe como transportá-lo com segurança até a clínica.",
+          "O atendimento é feito mediante agendamento. Ao agendar, informe a espécie do seu pet e pergunte à clínica como transportá-lo com segurança até a clínica.",
         ],
       },
       {
@@ -205,7 +205,7 @@ export const servicePages: LandingPageContent[] = [
       },
       {
         question: "Meu pet não está na lista. Vocês atendem?",
-        answer: "Fale com a equipe pelo WhatsApp e informe a espécie. A clínica confirma se pode fazer o atendimento.",
+        answer: "Fale com a clínica pelo WhatsApp e informe a espécie para confirmar se o atendimento é possível.",
       },
     ],
     related: ["/servicos/consulta-veterinaria", "/servicos/exames-veterinarios", "/servicos/hidratacao"],
@@ -251,7 +251,7 @@ export const servicePages: LandingPageContent[] = [
           "Outras vacinas, como a da gripe canina, indicadas conforme a rotina e o contato com outros cães",
         ],
         paragraphs: [
-          "Quais vacinas são indicadas e quais estão disponíveis na clínica é definido no atendimento. Consulte a equipe pelo WhatsApp.",
+          "Quais vacinas são indicadas e quais estão disponíveis na clínica é definido no atendimento. Consulte a clínica pelo WhatsApp.",
         ],
       },
       {
@@ -275,7 +275,7 @@ export const servicePages: LandingPageContent[] = [
       },
       {
         question: "Quais vacinas a Platz Vet aplica?",
-        answer: "Consulte a equipe pelo WhatsApp para saber as vacinas disponíveis e os valores.",
+        answer: "Consulte a clínica pelo WhatsApp para saber as vacinas disponíveis e os valores.",
       },
       {
         question: "Preciso levar a carteira de vacinação?",
@@ -320,7 +320,7 @@ export const servicePages: LandingPageContent[] = [
       {
         heading: "Preparo para o exame",
         paragraphs: [
-          "Alguns exames pedem jejum ou outros cuidados. Ao agendar pelo WhatsApp, pergunte à equipe sobre o preparo do exame indicado.",
+          "Alguns exames pedem jejum ou outros cuidados. Ao agendar pelo WhatsApp, pergunte à clínica sobre o preparo do exame indicado.",
         ],
       },
     ],
@@ -328,15 +328,15 @@ export const servicePages: LandingPageContent[] = [
       {
         question: "Quais exames a Platz Vet realiza?",
         answer:
-          "A clínica realiza diferentes exames. Consulte a equipe pelo WhatsApp para saber quais estão disponíveis para o caso do seu pet.",
+          "A clínica realiza diferentes exames. Consulte a clínica pelo WhatsApp para saber quais estão disponíveis para o caso do seu pet.",
       },
       {
         question: "O exame de sangue precisa de jejum?",
-        answer: "Depende do exame. Pergunte à equipe sobre o preparo ao agendar.",
+        answer: "Depende do exame. Pergunte à clínica sobre o preparo ao agendar.",
       },
       {
         question: "Quanto tempo demora o resultado?",
-        answer: "O prazo varia conforme o exame. Pergunte à equipe a previsão para o exame do seu pet.",
+        answer: "O prazo varia conforme o exame. Pergunte à clínica a previsão para o exame do seu pet.",
       },
       {
         question: "Posso fazer exames sem consulta?",
@@ -428,7 +428,7 @@ export const servicePages: LandingPageContent[] = [
         heading: "Praticidade depois da consulta",
         paragraphs: [
           "Saiu da consulta com uma prescrição? Você pode verificar ali mesmo se o item indicado está disponível na farmácia da clínica, sem precisar procurar em outro lugar.",
-          "Para saber a disponibilidade de um produto antes de ir, fale com a equipe pelo WhatsApp.",
+          "Para saber a disponibilidade de um produto antes de ir, fale com a clínica pelo WhatsApp.",
         ],
       },
       {
@@ -447,7 +447,7 @@ export const servicePages: LandingPageContent[] = [
       },
       {
         question: "Como sei se um produto está disponível?",
-        answer: "Fale com a equipe pelo WhatsApp e informe o nome do produto ou envie a foto da receita.",
+        answer: "Fale com a clínica pelo WhatsApp e informe o nome do produto ou envie a foto da receita.",
       },
     ],
     related: ["/servicos/consulta-veterinaria", "/servicos/vacinacao", "/servicos/hidratacao"],
@@ -475,7 +475,7 @@ export const petlovePage: LandingPageContent = {
       list: [
         "Confira no app ou no site da Petlove a cobertura do seu plano",
         "Envie o pedido de agendamento pelo WhatsApp e informe que é cliente Petlove",
-        "A equipe confirma o horário e os detalhes do atendimento",
+        "A clínica confirma o horário e os detalhes do atendimento",
       ],
     },
     {
@@ -493,7 +493,7 @@ export const petlovePage: LandingPageContent = {
     {
       question: "Meu plano cobre todos os serviços?",
       answer:
-        "Depende do plano contratado. Consulte a cobertura no app da Petlove ou fale com a equipe da clínica antes do atendimento.",
+        "Depende do plano contratado. Consulte a cobertura no app da Petlove ou fale com a clínica antes do atendimento.",
     },
   ],
   related: ["/servicos/consulta-veterinaria", "/servicos/vacinacao", "/servicos/exames-veterinarios"],

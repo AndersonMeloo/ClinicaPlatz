@@ -293,7 +293,7 @@ export const clinic: ClinicConfig = {
     {
       title: "Você agenda pelo WhatsApp",
       description:
-        "Sem cadastro e sem ligação: você envia o pedido com os dados do seu pet e a equipe responde com os horários disponíveis.",
+        "Sem cadastro e sem ligação: você envia o pedido com os dados do seu pet e a clínica responde com os horários disponíveis.",
       image: unsplash("/images/atendimento-1.jpg", "Casal sorrindo ao lado de seu cão"),
       confirmed: true,
     },
@@ -314,7 +314,7 @@ export const clinic: ClinicConfig = {
     {
       title: "Clientes Petlove",
       description:
-        "A Platz Vet atende clientes Petlove. Consulte a equipe sobre a cobertura do seu plano antes do atendimento.",
+        "A Platz Vet atende clientes Petlove. Consulte a clínica sobre a cobertura do seu plano antes do atendimento.",
       image: unsplash("/images/atendimento-4.jpg", "Cão deitado em uma caminha em uma sala clara com plantas"),
       confirmed: true,
     },
@@ -369,7 +369,7 @@ export const clinic: ClinicConfig = {
     {
       question: "Como funciona o agendamento pelo site?",
       answer:
-        "Você preenche um formulário curto e o WhatsApp abre com a mensagem pronta. É só revisar e enviar: a equipe da clínica responde com os horários disponíveis.",
+        "Você preenche um formulário curto e o WhatsApp abre com a mensagem pronta. É só revisar e enviar: a clínica responde com os horários disponíveis.",
       confirmed: true,
     },
     {
@@ -380,13 +380,13 @@ export const clinic: ClinicConfig = {
     },
     {
       question: "Vocês atendem clientes Petlove?",
-      answer: "Sim. Para saber a cobertura do seu plano, consulte a equipe antes do atendimento.",
+      answer: "Sim. Para saber a cobertura do seu plano, consulte a clínica antes do atendimento.",
       confirmed: true,
     },
     {
       question: "Quais animais são atendidos?",
       answer:
-        "Cães e gatos, e também pets não convencionais e animais silvestres, como roedores, aves e répteis. Esses pacientes são atendidos pela médica veterinária Letícia Amaro, mediante agendamento.",
+        "Cães e gatos, e também pets não convencionais e animais silvestres, como roedores, aves e répteis. Esses pacientes são atendidos pela médica veterinária Letícia Amaro, em alguns dias da semana, mediante agendamento.",
       confirmed: true,
     },
     { question: "Quais são as formas de pagamento?", answer: null, confirmed: false },

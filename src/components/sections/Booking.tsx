@@ -15,7 +15,7 @@ const steps = [
   },
   {
     title: "A clínica confirma",
-    text: "A equipe responde com os horários disponíveis. O agendamento vale após essa confirmação.",
+    text: "A clínica responde com os horários disponíveis. O agendamento vale após essa confirmação.",
   },
 ];
 
@@ -36,7 +36,7 @@ export function Booking({ defaultReason, title }: { defaultReason?: string; titl
             tone="dark"
             eyebrow="Agendamento"
             title={title ?? "Solicite um horário em poucos passos."}
-            intro="Sem cadastro e sem ligação. Você envia o pedido pelo WhatsApp e a equipe da clínica confirma a disponibilidade."
+            intro="Sem cadastro e sem ligação. Você envia o pedido pelo WhatsApp e a clínica confirma a disponibilidade."
           />
 
           <ol className="mt-12 border-t border-cream/15" data-reveal-group>

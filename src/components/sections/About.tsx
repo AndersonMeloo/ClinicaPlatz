@@ -56,8 +56,8 @@ export function About() {
 
             {clinic.specialists.map((s) => (
               <p key={s.name} className="mt-8 max-w-[52ch] border-t border-line pt-6 leading-relaxed text-ink-muted">
-                A equipe conta também com a médica veterinária <span className="font-semibold text-forest">{s.name}</span>,
-                no atendimento de{" "}
+                Em alguns dias, mediante agendamento, a clínica recebe também a médica veterinária{" "}
+                <span className="font-semibold text-forest">{s.name}</span>, que atende{" "}
                 <Link
                   href="/servicos/pets-nao-convencionais"
                   className="font-semibold text-forest underline decoration-forest/30 underline-offset-4 hover:decoration-forest"

@@ -24,7 +24,7 @@ export function InstagramBand() {
             Novidades e bastidores da clínica.
           </h2>
           <p className="mt-5 max-w-[40ch] leading-relaxed text-ink-muted">
-            Siga a {clinic.name} no Instagram para conhecer a equipe, o espaço e os pacientes.
+            Siga a {clinic.name} no Instagram para conhecer o dia a dia, o espaço e os pacientes.
           </p>
           {instagram ? (
             <a

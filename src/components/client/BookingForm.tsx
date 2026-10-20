@@ -360,7 +360,7 @@ export function BookingForm({
         <div role="status" className="rounded-xl border border-forest/15 bg-mint p-5 text-sm leading-relaxed">
           <p className="font-semibold">Abrimos o WhatsApp com a sua mensagem.</p>
           <p className="mt-1 text-forest/80">
-            Envie por lá e aguarde: a equipe vai responder com a disponibilidade. Seus dados continuam aqui caso
+            Envie por lá e aguarde: a clínica vai responder com a disponibilidade. Seus dados continuam aqui caso
             precise reenviar.
           </p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-semibold">

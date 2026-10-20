@@ -48,7 +48,7 @@ export default function BookingPage() {
               </div>
               <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-ink-muted lg:col-span-4 lg:col-start-9 lg:mt-0 lg:pb-2">
                 Atendimento para cães, gatos e pets não convencionais na {clinic.name}. Você monta o pedido aqui, envia
-                pelo WhatsApp e a equipe confirma o horário.
+                pelo WhatsApp e a clínica confirma o horário.
               </p>
             </div>
           </div>

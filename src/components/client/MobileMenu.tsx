@@ -49,6 +49,9 @@ export function MobileMenu() {
     if (!dialog || dialog.open) return;
     timeline.current?.kill();
     dialog.showModal();
+    // Foco no próprio menu (não no botão Fechar): evita o anel de foco no toque;
+    // pelo teclado, Tab segue para os links e Esc fecha.
+    dialog.focus();
 
     const parts = dialog.querySelectorAll("[data-menu-item]");
     const fades = dialog.querySelectorAll("[data-menu-fade]");
@@ -129,13 +132,14 @@ export function MobileMenu() {
 
       <dialog
         ref={dialogRef}
+        tabIndex={-1}
         id="menu-mobile"
         aria-label="Menu"
         onCancel={(event) => {
           event.preventDefault();
           close();
         }}
-        className="menu-sheet on-dark fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none bg-[#0b2219] p-0 text-cream backdrop:bg-transparent"
+        className="menu-sheet on-dark outline-none fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none bg-[#0b2219] p-0 text-cream backdrop:bg-transparent"
       >
         <div className="relative flex h-full flex-col overflow-y-auto">
           <div
